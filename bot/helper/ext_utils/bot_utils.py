@@ -134,7 +134,8 @@ def get_readable_message():
         tag = download.message.from_user.mention
         if reply_to := download.message.reply_to_message:
             tag = reply_to.from_user.mention
-elapsed = time() - download.extra_details['startTime']
+          
+        elapsed = time() - download.extra_details['startTime']
 
         msg += f"Hey {tag}, Please wait!\n<b>{download.status()}</b> "
         msg += f"Your Task [<a href='{download.message.link}'>{download.extra_details['mode']}</a>]"
