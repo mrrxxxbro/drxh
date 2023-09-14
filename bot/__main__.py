@@ -66,7 +66,7 @@ async def stats(_, message, edit_mode=False):
                 f'<code>Downloaded      : </code> {recv}\n' \
                 f'<code>Total Bandwidth : </code> {tb}'
 
-    sys_stats = f'<b><i><u>Zee System Statistics</u></i></b>\n\n'\
+    sys_stats = f'<b><i><u>Dr. Torrent X  System Statistics</u></i></b>\n\n'\
                 f'<b>System Uptime:</b> <code>{sysTime}</code>\n' \
                 f'<b>CPU:</b> {get_progress_bar_string(cpuUsage)}<code> {cpuUsage}%</code>\n' \
                 f'<b>CPU Total Core(s):</b> <code>{cpu_count(logical=True)}</code>\n' \
@@ -209,11 +209,11 @@ async def start(_, message):
         return await sendMessage(message, msg)
     elif config_dict['DM_MODE'] and message.chat.type != message.chat.type.SUPERGROUP:
         start_string = 'Bot Started.\n' \
-                       'Now I will send all of your stuffs here.\n' \
-                       'Use me at: @Z_Mirror'
+                       'Now I can send your stuff here.\n' \
+                       'Use me here: @DrTorrentXUpdates'
     elif not config_dict['DM_MODE'] and message.chat.type != message.chat.type.SUPERGROUP:
-        start_string = 'Sorry, you cannot use me here!\n' \
-                       'Join: @Z_Mirror to use me.\n' \
+        start_string = 'Sorry, you cant use me here!\n' \
+                       'Join @DrTorrentXUpdates to use me.\n' \
                        'Thank You'
     else:
         tag = message.from_user.mention
